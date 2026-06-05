@@ -4,14 +4,7 @@ async function lookupIP(ip) {
   return res.json()
 }
 
-document.getElementById("lookupBtn").addEventListener("click", async () => {
-  const ip = document.getElementById("ipInput").value.trim()
-  const el = document.getElementById("result")
-  el.innerHTML = '<div class="loading">Looking up<span>.</span><span>.</span><span>.</span></div>'
-  el.className = "result-box"
-
-  const data = await lookupIP(ip)
-
+function showResult(data, el) {
   if (data.status === "fail") {
     el.textContent = "Invalid IP address"
     el.className = "result-box error"
@@ -33,9 +26,25 @@ document.getElementById("lookupBtn").addEventListener("click", async () => {
     <div class="result-item"><span class="result-label">Hosting</span><span class="result-value">${data.hosting ? "Yes" : "No"}</span></div>
   `
   el.className = "result-box"
+}
+
+document.getElementById("lookupBtn").addEventListener("click", async () => {
+  const ip = document.getElementById("ipInput").value.trim()
+  const el = document.getElementById("result")
+  el.innerHTML = '<div class="loading">Looking up<span>.</span><span>.</span><span>.</span></div>'
+  el.className = "result-box"
+  const data = await lookupIP(ip)
+  showResult(data, el)
 })
 
-// Auto-lookup on Enter
 document.getElementById("ipInput").addEventListener("keydown", e => {
   if (e.key === "Enter") document.getElementById("lookupBtn").click()
+})
+
+// Auto-detect your IP on page load
+window.addEventListener("load", async () => {
+  const el = document.getElementById("result")
+  el.innerHTML = '<div class="loading">Detecting your IP<span>.</span><span>.</span><span>.</span></div>'
+  const data = await lookupIP("")
+  showResult(data, el)
 })
