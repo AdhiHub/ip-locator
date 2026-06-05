@@ -1,0 +1,48 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0a0a0f;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.container {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 2rem;
+}
+header { text-align: center; margin-bottom: 2rem; }
+header h1 { font-size: 1.8rem; color: #818cf8; }
+header p { color: #666; font-size: 0.85rem; margin-top: 0.3rem; }
+.input-group { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+.input-group input {
+  flex: 1; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03); color: #e0e0e0; font-size: 0.9rem; outline: none;
+}
+.input-group input:focus { border-color: rgba(129,140,248,0.3); }
+.btn {
+  padding: 0.7rem 1.5rem; border-radius: 10px; border: none; font-weight: 600; font-size: 0.85rem;
+  background: linear-gradient(135deg, #818cf8, #a855f7); color: #fff; cursor: pointer; transition: all 0.3s;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(129,140,248,0.3); }
+.result-box {
+  padding: 1.5rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 10px; min-height: 10rem; font-size: 0.85rem; line-height: 1.8;
+}
+.result-box.error { color: #ef4444; }
+.result-item { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+.result-item:last-child { border: none; }
+.result-label { color: #666; }
+.result-value { color: #e0e0e0; font-weight: 500; }
+.result-value.highlight { color: #818cf8; }
+.loading { text-align: center; color: #818cf8; }
+.loading span { animation: blink 1s infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+footer { text-align: center; margin-top: 2rem; color: #555; font-size: 0.78rem; }
+footer a { color: #818cf8; text-decoration: none; }
