@@ -46,3 +46,4 @@ header p { color: #666; font-size: 0.85rem; margin-top: 0.3rem; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 footer { text-align: center; margin-top: 2rem; color: #555; font-size: 0.78rem; }
 footer a { color: #818cf8; text-decoration: none; }
+.notice { text-align: center; color: #f59e0b; font-size: 0.78rem; margin-bottom: 0.8rem; padding: 0.5rem; border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; background: rgba(245,158,11,0.05); }
