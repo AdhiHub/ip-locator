@@ -101,7 +101,7 @@ No installation needed — works in any browser.
 
 ## 📡 API
 
-Powered by [ip-api.com](https://ip-api.com) — free, no API key required for non-commercial use.
+Powered by [ipinfo.io](https://ipinfo.io) — free HTTPS API (50k requests/month).
 
 ---
 
