@@ -94,7 +94,8 @@ Below are the common methods people use to get someone's IP address.
 
 ## 🚀 How to Use
 
-Open `index.html` in any browser. No installation needed.
+Open the live site: [https://adhihub.github.io/ip-locator/](https://adhihub.github.io/ip-locator/)  
+No installation needed — works in any browser.
 
 ---
 
